@@ -1,0 +1,35 @@
+﻿#sliderContainer { width: 843px; height: 300px; position: relative; margin: 0 auto; border: 2px solid black;  }
+
+#sliderContainer .slideContent {   _background:url("../images/contentBg.png") repeat scroll 0 0 transparent; position: absolute; bottom:0px; right:0px; padding: 10px; width: 843px; }
+ 
+#sliderContainer .slide h3 { visibility:hidden;  font: 26px/1em 'Rokkitt', serif; color: #FFF;  margin: 0 0 5px 0; }
+
+#sliderContainer .slide p { visibility:hidden; font-size: 14px; color: White; margin: 0; }
+
+#sliderContainer .jFlowSlideContainer { overflow: hidden; }
+
+#sliderContainer .jFlowSlideContainer a { color: #F90; text-decoration: none; font-style: italic; }
+
+#sliderContainer .jFlowSlideContainer a:hover { text-decoration: none; }
+
+#sliderContainer .jFlowSlideContainer a:focus { position: relative; top: 1px; }
+
+#sliderContainer .jFlowNext { background:url("../images/home/scroll/arrows.png") no-repeat scroll 0 -35px transparent; height:130px; position:absolute; top:75px; right: -50px; width:50px; cursor:pointer; }
+
+#sliderContainer .jFlowPrev { background:url("../images/home/scroll/arrows.png") no-repeat scroll -84px -35px transparent; height:130px; position:absolute; top:75px; left: -50px; width:50px; cursor:pointer; }
+
+#sliderContainer .jFlowPrev:hover { background-position: -84px -235px; }
+
+#sliderContainer .jFlowNext:hover { background-position: 0px -235px; }
+
+
+/* controller pagination */
+
+#myController {position: absolute; top: 5px; right: 5px; }
+
+#myController .jFlowControl { background:url("../images/home/scroll/bullet.png") no-repeat scroll 0px 0px transparent;  float: left; width: 15px; height: 15px;}
+
+#myController .jFlowControl:hover { background-position: -32px 0px; cursor: pointer; }
+
+#myController .jFlowSelected, .jFlowSelected:hover {background-position: -15px 0px;   }
+ 

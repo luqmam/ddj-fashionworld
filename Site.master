@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <meta name="keywords" content="ddjfashionworld, buy pakistani clothing, buy indian clothing, women clothing, men clothing , kid clothing" />
+<meta name="description" content="Buy the latest traditional women's fashion, men's and kids clothing at DDJ-FashionWorld. We have over a 100 albums to choose from ..." />
+
+<link rel="icon" 
+      type="image/png" 
+      href="assets/images/logo/favcon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/libraries.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/content.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css" />
+   
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <script type="text/javascript" src="assets/scripts/grid.js"></script>
+    <script type="text/javascript" src="assets/scripts/currency.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-1.4.1-vsdoc.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-ui.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36889350-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+
+
+</head>
+<body onload="init()">
+    <form runat="server">
+    <div class="page">
+        <div class="head clear">
+            <div class="headContent">
+                <div class="line">
+                    <div class="unit size1of4">
+                        <div class="logo">
+                            <a href="~/Default.aspx" title="default page" runat="server">
+                                <img src="~/assets/images/logo/logo2.png" alt="Company Logo" runat="server" /></a></div>
+                    </div>
+                    <div class="unit size1of2">
+                        <div class="contact">
+                            <img alt="Phone" src="assets/images/phone.png" />
+                            <p class="bigFont">
+                                FOR SALES AND ADVICE CALL:</p>
+                            <p class="bigFont1">
+                                +44 203 538 2502</p>
+                        </div>
+                    </div>
+                    <div class="unitExt size1of4 _lastUnit">
+                       
+                        <div class="currency menu">
+                            <ul class="dropdown">
+                                <li><a class="smallFont">Currency </a>
+                                    <ul class="sub_menu">
+                                        <li><a href="#" onclick="select_currency(1)" title="Display our prices in British Sterlings (GBP)">&#8226; GBP (£)</a></li>
+                                        <li><a href="#" onclick="select_currency(2)" title="Display our prices in Euros (Euro)" >&#8226; Euro (€)</a></li>
+                                        <li><a href="#" onclick="select_currency(3)" title="Display our prices in Danish Krone (DKK)">&#8226; Danish Krone (DKK)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav clear ">
+            <div class="navContent">
+                <div class="menu">
+                    <ul class="dropdown">
+                        <li><a href="Women.aspx">Women</a>
+                            <ul class="sub_menu">
+                                <li><a href="WomenCategoryType.aspx?category_type=shalwarkameez">&#8226; Shalwar Kameez</a></li>
+                                <li><a href="WomenCategoryType.aspx?category_type=sarees">&#8226; Sarees</a></li>
+                                <li><a href="WomenCategoryType.aspx?category_type=designercollection">
+                                   &#8226; Designer Collection</a></li>
+                                <li><a href="WomenCategoryType.aspx?category_type=lehenga">&#8226; Lehenga</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Men.aspx">Men</a>
+                            <ul class="sub_menu">
+                                <li><a href="MenCategoryType.aspx?category_type=sherwani">&#8226; Sherwani</a></li>
+                                <li><a href="MenCategoryType.aspx?category_type=Kurta">&#8226; Kurta</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Kids.aspx">Kids</a>
+                            <ul class="sub_menu">
+                                <li><a href="KidsCategoryType.aspx?category_type=girls">&#8226; Girls</a></li>
+                                <li><a href="KidsCategoryType.aspx?category_type=boys">&#8226; Boys</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="colorRed" href="Sale.aspx">Sale!</a></li>
+                        <li><a href="About.aspx" >About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="body clear">
+            <div class="bodyContent">
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+        </div>
+        <div class="foot clear">
+            <div class="footContent">
+                <div class="catalogue">
+                    <h4>
+                        Browse Categories...</h4>
+                    <div class="line">
+                        <div class="unit size1of4">
+                            <a href="~/WomenCategoryType.aspx?category_type=shalwarkameez" runat="server">
+                                <img src="~/assets/images/home/Sarees.jpg" alt="Sarees"  runat="server" /></a>
+                        </div>
+                        <div class="unit size1of4">
+                            <a href="~/WomenCategoryType.aspx?category_type=sarees" runat="server">
+                                <img src="~/assets/images/home/Salwars.jpg" alt="Salwars" runat="server"/></a>
+                        </div>
+                        <div class="unit size1of4">
+                            <a href="~/MenCategoryType.aspx?category_type=shalwarkameez" runat="server">
+                                <img src="~/assets/images/home/Menswear.jpg" alt="Menswear" runat="server"/></a>
+                        </div>
+                        <div class="unit size1of4 lastUnit">
+                            <a href="~/KidsCategoryType.aspx?category_type=boys" runat="server">
+                                <img src="~/assets/images/home/Kids.jpg" alt="Kids"  runat="server"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="quicklinks">
+                    <div class="line">
+                        <div class="unit size1of5">
+                            <div class="fb">
+                                <a href="http://www.facebook.com/DdjFashionWorld">Join Us @</a><img alt="fb" src="assets/images/fb.png" />
+                            </div>
+                        </div>
+                        <div class="unit size3of5">
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="Terms.aspx">Terms & Conditions</a> </li>
+                                    <li><a href="Terms.aspx"">Return and refund policy</a></li>
+                                    <li><a href="Terms.aspx"">Privacy Policy</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="unit size1of5">
+                            <div class="copyright">
+                                <p class="smallFont1">(c) Copyright 2012-2013  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
